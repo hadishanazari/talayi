@@ -1,44 +1,47 @@
 backend:
   name: git-gateway
-  repo: hadishanazari/talayi
   branch: main
 
-media_folder: "" # چون برای هر صفحه جدا تعریف می‌کنیم
-public_folder: ""
+media_folder: "assets/images"
+public_folder: "/assets/images"
 
 collections:
   - name: "mokaabtalayi-index"
     label: "Mokaab Talayi - Home"
-    file: "mokaabtalayi/index.html"
-    media_folder: "mokaabtalayi/assets/indexImages"
-    public_folder: "/mokaabtalayi/assets/indexImages"
-    fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Content", name: "body", widget: "markdown" }
+    files:
+      - file: "mokaabtalayi/index.html"
+        label: "Home Page"
+        name: "home"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Content", name: "body", widget: "markdown" }
 
   - name: "mokaabtalayi-threeLayer"
     label: "Mokaab Talayi - Three Layer"
-    file: "mokaabtalayi/pages/threelayer.html"
-    media_folder: "mokaabtalayi/assets/threeLayerImages"
-    public_folder: "/mokaabtalayi/assets/threeLayerImages"
-    fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Content", name: "body", widget: "markdown" }
+    files:
+      - file: "mokaabtalayi/pages/threelayer.html"
+        label: "Three Layer Page"
+        name: "threeLayer"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Content", name: "body", widget: "markdown" }
 
   - name: "mokaabtalayi-chapi"
     label: "Mokaab Talayi - Chapi"
-    file: "mokaabtalayi/pages/chapi.html"
-    media_folder: "mokaabtalayi/assets/chapiImages"
-    public_folder: "/mokaabtalayi/assets/chapiImages"
-    fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Content", name: "body", widget: "markdown" }
+    files:
+      - file: "mokaabtalayi/pages/chapi.html"
+        label: "Chapi Page"
+        name: "chapi"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Content", name: "body", widget: "markdown" }
 
   - name: "mokaabtalayi-lamineti"
     label: "Mokaab Talayi - Lamineti"
-    file: "mokaabtalayi/pages/lamineti.html"
-    media_folder: "mokaabtalayi/assets/laminetiImages"
-    public_folder: "/mokaabtalayi/assets/laminetiImages"
-    fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Content", name: "body", widget: "markdown" }
+    files:
+      - file: "mokaabtalayi/pages/lamineti.html"
+        label: "Lamineti Page"
+        name: "lamineti"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Content", name: "body", widget: "markdown" }
